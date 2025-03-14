@@ -29,7 +29,3 @@ A aplicação integra as seguintes funcionalidades:
 | **Bridge**          | Separa a abstração (controle do veículo) da implementação (detalhes do veículo), permitindo que ambas variem independentemente. |
 | **Singleton**       | Garante que exista apenas uma instância global do monitor de frota (`FleetMonitor`) em todo o sistema. |
 | **Prototype**       | Permite a clonagem de veículos já configurados, facilitando a criação de novas instâncias com configurações semelhantes. |
-
-## Como Executar
-
-*Insira aqui as instruções de compilação, execução e testes, se necessário.*
