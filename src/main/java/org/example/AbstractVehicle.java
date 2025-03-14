@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Observable;
 
-public abstract class AbstractVehicle extends Observable implements VehicleType {
+public abstract class AbstractVehicle extends Observable implements VehicleType, Cloneable {
     private String vehicleId;
     private VehicleState state;
     private final Engine engine;
@@ -71,5 +71,17 @@ public abstract class AbstractVehicle extends Observable implements VehicleType 
     @Override
     public String reportStatus() {
         return state.reportStatus();
+    }
+
+    @Override
+    public AbstractVehicle clone() throws CloneNotSupportedException {
+        AbstractVehicle cloned = (AbstractVehicle) super.clone();
+        cloned.deleteObservers();
+        cloned.addObserver(FleetMonitor.getInstance());
+        return cloned;
+    }
+
+    protected void setVehicleId(String newId) {
+        this.vehicleId = newId;
     }
 }
