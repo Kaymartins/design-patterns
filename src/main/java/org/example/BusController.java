@@ -7,7 +7,7 @@ public class BusController extends VehicleController{
     }
 
     @Override
-    public void operate() {
-        vehicle.startEngine();
+    public String operate() {
+        return vehicle.startEngine();
     }
 }

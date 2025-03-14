@@ -2,7 +2,7 @@ package org.example;
 
 public class VehicleBus extends AbstractVehicle {
 
-    VehicleBus(String vehicleId, MaintenanceFactory factory) {
+    public VehicleBus(String vehicleId, MaintenanceFactory factory) {
         super(vehicleId, factory);
     }
 

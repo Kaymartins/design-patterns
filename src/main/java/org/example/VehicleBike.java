@@ -1,6 +1,7 @@
 package org.example;
 
 public class VehicleBike extends AbstractVehicle {
+
     public VehicleBike(String vehicleId, MaintenanceFactory factory) {
         super(vehicleId, factory);
     }

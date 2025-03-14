@@ -5,7 +5,7 @@ public class MetroController extends VehicleController {
         super(vehicle);
     }
 
-    public void operate(){
-        vehicle.startEngine();
+    public String operate(){
+        return vehicle.startEngine();
     }
 }
