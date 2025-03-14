@@ -3,8 +3,9 @@ package org.example;
 public interface VehicleType {
     String startEngine();
     String stopEngine();
-    MaintenanceFactory getMaintenanceFactory();
     String getVehicleId();
+    Engine getEngine();
+    BrakeSystem getBrakes();
 
     void setState(VehicleState state);
     VehicleState getState();

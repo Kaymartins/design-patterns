@@ -8,8 +8,13 @@ public abstract class VehicleDecorator implements  VehicleType{
     }
 
     @Override
-    public MaintenanceFactory getMaintenanceFactory() {
-        return decoratedVehicle.getMaintenanceFactory();
+    public Engine getEngine() {
+        return null;
+    }
+
+    @Override
+    public BrakeSystem getBrakes() {
+        return null;
     }
 
     @Override

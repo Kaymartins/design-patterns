@@ -1,8 +1,8 @@
 package org.example;
 
 public class VehicleBike extends AbstractVehicle {
-    public VehicleBike(String vehicleId) {
-        super(vehicleId);
+    public VehicleBike(String vehicleId, MaintenanceFactory factory) {
+        super(vehicleId, factory);
     }
 
     @Override
@@ -14,10 +14,5 @@ public class VehicleBike extends AbstractVehicle {
     @Override
     public String stopEngine() {
         return "Bicicleta " + getVehicleId() + ": fora de uso.";
-    }
-
-    @Override
-    public MaintenanceFactory getMaintenanceFactory() {
-        return new BikeMaintenanceFactory();
     }
 }

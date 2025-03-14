@@ -1,8 +1,8 @@
 package org.example;
 
 public class VehicleMetro extends AbstractVehicle {
-    public VehicleMetro(String vehicleId) {
-        super(vehicleId);
+    public VehicleMetro(String vehicleId, MaintenanceFactory factory) {
+        super(vehicleId, factory);
     }
 
     @Override
@@ -16,8 +16,4 @@ public class VehicleMetro extends AbstractVehicle {
         return "Metrô " + getVehicleId() + ": Sistema elétrico desativado.";
     }
 
-    @Override
-    public MaintenanceFactory getMaintenanceFactory() {
-        return new MetroMaintenanceFactory(); // Supondo que existe essa fábrica
-    }
 }

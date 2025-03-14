@@ -5,11 +5,25 @@ import java.util.Observable;
 public abstract class AbstractVehicle extends Observable implements VehicleType {
     private String vehicleId;
     private VehicleState state;
+    private final Engine engine;
+    private final BrakeSystem brakes;
 
-    public AbstractVehicle(String vehicleId){
+    public AbstractVehicle(String vehicleId, MaintenanceFactory factory){
         this.vehicleId = vehicleId;
+        this.engine = factory.createEngine();
+        this.brakes = factory.createBrakeSystem();
         this.state = new AvailableState();
         this.addObserver(FleetMonitor.getInstance());
+    }
+
+    @Override
+    public Engine getEngine() {
+        return engine;
+    }
+
+    @Override
+    public BrakeSystem getBrakes() {
+        return brakes;
     }
 
     @Override
